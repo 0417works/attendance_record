@@ -180,3 +180,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border: none;
   min-height: 100%;
 }
+
+/* 合計算出テーブルタグ */
+.aggregation-table {
+  margin-top: 50px;
+  border: solid 1px;
+  border-color: darkgrey;
+  border-spacing: 0;
+}
+.aggregation-table th {
+  border: solid 1px;
+  border-color: darkgrey;
+  min-width: 50px;
+  min-height: 30px;
+}
+.aggregation-table td {
+  border: solid 1px;
+  border-color: darkgrey;
+  min-width: 50px;
+  height: 40px;
+}
+.aggregation-table input {
+  border: none;
+  min-height: 100%;
+}
