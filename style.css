@@ -1,0 +1,182 @@
+/**
+ * ログイン画面
+ */
+
+/* ログイン入力欄要素 */
+.login-container {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* ログイン入力要素 */
+.login-container input[type="text"], .login-container input[type="password"] {
+  width: 93%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ECF0F1;
+}
+/* ログインボタン */
+.login-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db; /*#4caf50;*/
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.login-container button:hover {
+  background-color: #2980B9;
+}
+
+/**
+ * 出勤簿画面
+ */
+
+/* ページヘッダ要素 */
+.page-header-wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+/* ページタイトル */
+#page-title {
+  width: 100%;
+  padding: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  border-left: solid 1em #3498db; /* coral;*/
+  border-bottom: solid 0.1em #3498db; /* coral; */
+  padding-left: 0.5em;
+  padding-top: 1em;
+}
+
+/* ヘッダプロフィール要素 */
+.page-profile-wrap {
+  display: flex;
+  flex-flow: column;
+}
+
+/* ヘッダープロフィールテーブル */
+.profile-table {
+  border: 0;
+  border-spacing: 0;
+}
+.profile-table th {
+  max-height: 30px;
+  min-width: 80px;
+  border: solid 0.5px;
+  border-color: white;
+  color: white;
+  margin: 0;
+  background-color: #3498db;
+}
+.profile-table td {
+  max-height: 30px;
+  min-width: 120px;
+  border: solid 0.5px;
+  border-color: #3498db;
+  margin: 0;
+}
+
+/* 年月選択要素 */
+.form-select-date {
+  margin-top: 20px;
+  max-width: 300px;
+  align-items: center;
+  white-space: nowrap;
+}
+.form-select-date > select {
+  padding: 8px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.logout-button {
+  width: 100px;
+  padding: 10px;
+  background-color: #3498db; /*#4caf50;*/
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.logout-button:hover {
+  background-color: #2980B9;
+}
+
+
+/* 出勤表テーブルタグ */
+.attendance-record-table {
+  border: solid 2px;
+  border-color: #554d4d4d; /*darkgrey;*/
+  border-spacing: 0;
+}
+.attendance-record-table thead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 50px;
+}
+/* 出勤表ヘッダ、レコードタグ */
+.attendance-record-table th,.attendance-record-table tr {
+  border: solid 1px;
+  border-color: darkgray;
+  margin: 0;
+  width: 50px;
+}
+.attendance-record-table tr:nth-child(2n+1) {
+  background: #F0FFFF; /* !important; */
+}
+.attendance-record-table tr:hover {
+  background-color: aqua; /* !important; */
+}
+
+/* 出勤表データタグ */
+.attendance-record-table td {
+  text-align: center;
+  height: 40px;
+}
+
+/* 備考セル */
+#remarks {
+  min-width: 120px;
+}
+
+/* 数値入力セル */
+.number-input {
+  max-width: 40px;
+  border: none;
+  height: 100%;
+}
+
+/* 時間入力セル */
+.time-input {
+  max-width: 70px;
+  border: none;
+  height: 100%;
+}
+/* 時間入力セルの時計アイコンを非表示にする(Chrome向け対応) */
+input[type="time"] {
+  position: relative;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    opacity: 0;
+}
+
+/* テキスト入力セル */
+.text-input {
+  border: none;
+  min-height: 100%;
+}
