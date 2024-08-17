@@ -324,7 +324,6 @@ function calcAttendanceStatus() {
         let actualWorkCell = document.getElementById('actual-work');
         var hour = Math.floor(Math.abs(actualWork) / 3600);
         var minute = Math.floor(Math.abs(actualWork) % 3600 / 60);
-        hour = ('00' + hour).slice(-2);
         minute = ('00' + minute).slice(-2);        
         actualWorkCell.innerHTML = (actualWork <= 0) ? '' : `${hour}:${minute}`;
     }
@@ -369,6 +368,10 @@ function createInputTimeCell() {
         }
 
         // 実働時間の算出
+        if (secondEndTime < secondStartTime) {
+            // 開始時間より終了時間が短い場合は、日を跨いだと判定して1日分の秒数を足す
+            secondEndTime += 86400;
+        }
         let actualWorkTime = secondEndTime - secondStartTime - secondSRestTime;
         var hour = Math.floor(Math.abs(actualWorkTime) / 3600);
         var minute = Math.floor(Math.abs(actualWorkTime) % 3600 / 60);
