@@ -115,7 +115,6 @@
   background-color: #2980B9;
 }
 
-
 /* 出勤表テーブルタグ */
 .attendance-record-table {
   border: solid 2px;
@@ -126,8 +125,10 @@
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 999;
   height: 50px;
 }
+
 /* 出勤表ヘッダ、レコードタグ */
 .attendance-record-table th,.attendance-record-table tr {
   border: solid 1px;
@@ -135,9 +136,11 @@
   margin: 0;
   width: 50px;
 }
+/* 偶数行と奇数行でテーブル行の色をわける */
 .attendance-record-table tr:nth-child(2n+1) {
   background: #F0FFFF; /* !important; */
 }
+/* マウスオーバー時に背景をハイライトする */
 .attendance-record-table tr:hover {
   background-color: aqua; /* !important; */
 }
@@ -183,7 +186,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 /* 合計算出テーブルタグ */
 .aggregation-table {
-  margin-top: 50px;
   border: solid 1px;
   border-color: darkgrey;
   border-spacing: 0;
@@ -199,8 +201,23 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-color: darkgrey;
   min-width: 50px;
   height: 40px;
+  text-align: right;
 }
 .aggregation-table input {
   border: none;
   min-height: 100%;
+}
+
+/*  */
+#aggregation-title {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border-left: solid 1em #3498db; /* coral;*/
+  border-bottom: solid 0.1em #3498db; /* coral; */
+  padding-left: 0.5em;
+  padding-top: 0.05em;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
